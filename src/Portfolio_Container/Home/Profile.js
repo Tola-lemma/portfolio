@@ -1,4 +1,5 @@
 import React from "react";
+import Typical from "react-typical";
 
 export const Profile = () => {
   return (
@@ -6,25 +7,72 @@ export const Profile = () => {
       <div className="profile-parent">
         <div className="profile-details">
           <div className="colz">
+            <div className="colz-icon">
             <a href="https://m.facebook.com/m.tolalemma">
               <i className="fa-brands fa-facebook"></i>
             </a>
             <a href="https://www.instagram.com/tolalemma/">
-              <i class="fa-brands fa-square-instagram"></i>
+              <i className="fa-brands fa-square-instagram"></i>
             </a>
             <a href="https://mobile.twitter.com/tolalemma">
-              <i class="fa-brands fa-twitter"></i>
+              <i className="fa-brands fa-twitter"></i>
             </a>
             <a href="https://www.linkedin.com/in/tolalemma/">
-              <i class="fa-brands fa-linkedin"></i>
+              <i className="fa-brands fa-linkedin"></i>
             </a>
             <a href="https://t.me/tolalemma">
-              <i class="fa-brands fa-telegram"></i>
+              <i className="fa-brands fa-telegram"></i>
             </a>
             <a href="https://call.imo.im/1optimisticboy">
-              <i class="fa-brands fa-google-plus"></i>
+              <i className="fa-brands fa-google-plus"></i>
             </a>
+            </div>
           </div>
+          <div className="profile-details-name">
+            <span className="primary-text">
+              {" "}
+              Hello, I'M  <span className="highlighted-text">Tola Lemma</span>
+            </span>
+          </div>
+          <div className="profile-details-role">
+             <span className="primary-text">
+                {" "}
+                <h1>
+                  {' '}
+                  <Typical 
+                    loop={Infinity}
+                    steps={[
+                      "Full Stack Developer 💻  ",
+                      2000,
+                      "MERN Stack Dev 🌐  ",
+                      2000,
+                      "React Dev  ",
+                      2000,
+                    ]}
+                  />
+                </h1>
+                <span className="profile-role-tagline">
+                Bringing web applications to life with seamless front-end and back-end integration.
+                </span>
+             </span>
+          </div>
+          <div className="profile-option">
+              <button className="btn primary-btn">
+                {" "}
+                Hire Me
+                {' '}
+              </button>
+              <a href="resume.pdf" download="Tola Lemma's resume.pdf">
+                <button className="btn highlighed-btn">
+                  Get Resume
+                </button>
+                </a>
+          </div>
+        </div>
+        <div className="profile-picture">
+           <div className="profile-picture-background">
+
+           </div>
         </div>
       </div>
     </div>
