@@ -95,7 +95,7 @@
   }
   
   .primary-btn {
-    color: white;
+    color:var(--white);
     border: 2px solid linen;
     font-size: 12px;
     background-color: #1f2235;
@@ -113,7 +113,7 @@
   }
   
   .highlighted-btn {
-    color: white;
+    color:var(--white);
     font-size: 12px;
     background-color: #ff5823;
   }
