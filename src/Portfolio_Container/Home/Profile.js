@@ -1,6 +1,6 @@
 import React from "react";
 import Typical from "react-typical";
-
+import './Profile.css'
 export const Profile = () => {
   return (
     <div className="profile-container">
@@ -44,7 +44,7 @@ export const Profile = () => {
                     steps={[
                       "Full Stack Developer 💻  ",
                       2000,
-                      "MERN Stack Dev 🌐  ",
+                      "MERN Stack Developer 🌐  ",
                       2000,
                       "React Dev  ",
                       2000,
@@ -56,7 +56,7 @@ export const Profile = () => {
                 </span>
              </span>
           </div>
-          <div className="profile-option">
+          <div className="profile-options">
               <button className="btn primary-btn">
                 {" "}
                 Hire Me
@@ -71,7 +71,7 @@ export const Profile = () => {
         </div>
         <div className="profile-picture">
            <div className="profile-picture-background">
-
+           
            </div>
         </div>
       </div>
