@@ -63,7 +63,7 @@ export const Profile = () => {
                 {' '}
               </button>
               <a href="resume.pdf" download="Tola Lemma's resume.pdf">
-                <button className="btn highlighed-btn">
+                <button className="btn highlighted-btn">
                   Get Resume
                 </button>
                 </a>
