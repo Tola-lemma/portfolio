@@ -1,6 +1,7 @@
 .profile-container{
     display: flex;
     align-items: center;
+    text-align: center;
     justify-content: center;
     height: 10%;
     min-height:fit-content ;
