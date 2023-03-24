@@ -4,7 +4,6 @@
     justify-content: center;
     height: 10%;
     min-height:fit-content ;
-    background-image: url('../../assets/Home/bg.png');
 }
 .profile-parent{
     display: flex;
