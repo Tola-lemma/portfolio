@@ -1,8 +1,8 @@
 import {Home} from '../Portfolio_Container/Home/Home';
 import AboutMe from '../Portfolio_Container/AboutMe/AboutMe';
 import Resume from '../Portfolio_Container/Resume/Resume';
-// import ContactMe from '../Portfolio_Container/ContactMe/ContactMe';
-// import Projects from '../Portfolio_Container/Projects/Projects';
+import Projects from '../Portfolio_Container/Projects/Projects';
+import ContactMe from '../Portfolio_Container/ContactMe/ContactMe';
 
 export const TOTAL_SCREENS = [
     {
@@ -17,14 +17,14 @@ export const TOTAL_SCREENS = [
         screen_name: "Resume",
         component: Resume,
     },
-    // {
-    //     screen_name: "Projects",
-    //     component: Projects,
-    // },  
-    // {
-    //     screen_name: "ContactMe",
-    //     component: ContactMe,
-    // },
+    {
+        screen_name: "Projects",
+        component: Projects,
+    },  
+    {
+        screen_name: "ContactMe",
+        component: ContactMe,
+    },
   
 ];
 
