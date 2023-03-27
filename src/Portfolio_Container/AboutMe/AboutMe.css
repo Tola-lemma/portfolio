@@ -49,7 +49,7 @@
     height: 12px;
     width: 12px;
     margin: 0 10px 0 0;
-    background-color: var(--light-yellow);
+    color: var(--orange);
     border-radius: 25%;
   }
   .about-me-options .highlighted-btn {
