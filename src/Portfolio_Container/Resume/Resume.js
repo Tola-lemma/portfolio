@@ -20,7 +20,7 @@ const Resume = (props) => {
       return (
         <div className="resume-heading">
           <div className="resume-main-heading">
-            <div className="heading-bullet"> <i class="fa-sharp fa-solid fa-circle-info"></i></div>
+            <div className="heading-bullet"> <i className="fa-sharp fa-solid fa-circle-info"></i></div>
             <span>{props.heading ? props.heading : ""}</span>
             {props.fromDate && props.toDate ? (
               <div className="heading-date">
@@ -152,7 +152,7 @@ const Resume = (props) => {
       <div className="resume-screen-container programming-skills-container" key="programming-skills">
         {programmingSkillsDetails.map((skill, index) => (
           <div className="skill-parent" key={index}>
-            <div className="heading-bullet"><i class="fa-sharp fa-solid fa-code"></i> </div>
+            <div className="heading-bullet"><i className="fa-sharp fa-solid fa-code"></i> </div>
             <span>{skill.skill}</span>
             <div className="skill-percentage">
               <div
@@ -168,7 +168,7 @@ const Resume = (props) => {
       <div className="resume-screen-container application-skills-container" key="application-skills">
         {applicationSkillsDetails.map((skill, index) => (
           <div className="skill-parent" key={index}>
-            <div className="heading-bullet"><i class="fa-sharp fa-solid fa-desktop"></i> </div>
+            <div className="heading-bullet"><i className="fa-sharp fa-solid fa-desktop"></i> </div>
             <span>{skill.skill}</span>
             <div className="skill-percentage">
               <div
