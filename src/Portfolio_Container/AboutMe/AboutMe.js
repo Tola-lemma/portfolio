@@ -9,8 +9,7 @@ export default function AboutMe(props) {
     if (screen.fadeInScreen !== props.id) return;
     Animations.animations.fadeInScreen(props.id);
   };
-  const fadeInSubscription =
-    ScrollService.currentScreenFadeIn.subscribe(fadeInScreenHandler);
+  ScrollService.currentScreenFadeIn.subscribe(fadeInScreenHandler);
 
   const SCREEN_CONSTSANTS = {
     description:
@@ -30,7 +29,7 @@ export default function AboutMe(props) {
     return( 
       SCREEN_CONSTSANTS.highlights.bullets.map((value, i) => (
       <div className="highlight " key={i}>
-        <div className="highlight-blob "><i class="fa-solid fa-hand-point-right"></i></div>
+        <div className="highlight-blob "><i className="fa-solid fa-hand-point-right"></i></div>
         <span>{value}</span>
       </div>
       ))
