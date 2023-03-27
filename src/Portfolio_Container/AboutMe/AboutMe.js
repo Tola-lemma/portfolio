@@ -30,7 +30,7 @@ export default function AboutMe(props) {
     return( 
       SCREEN_CONSTSANTS.highlights.bullets.map((value, i) => (
       <div className="highlight " key={i}>
-        <div className="highlight-blob "></div>
+        <div className="highlight-blob "><i class="fa-solid fa-hand-point-right"></i></div>
         <span>{value}</span>
       </div>
       ))
