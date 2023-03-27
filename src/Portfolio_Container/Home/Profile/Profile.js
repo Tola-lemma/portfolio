@@ -58,11 +58,12 @@ export const Profile = () => {
              </span>
           </div>
           <div className="profile-options">
-              <button className="btn primary-btn">
+              <button className="btn primary-btn"
+              onClick={() => ScrollService.scrollHandler.scrollToHireMe()}
+              >
                 {" "}
                 Hire Me
                 {' '}
-                onClick={() => ScrollService.scrollHandler.scrollToHireMe()}
               </button>
               <a href="My_CV.pdf" download="Tola Lemma's resume.pdf">
                 <button className="btn highlighted-btn">
