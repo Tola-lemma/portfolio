@@ -6,11 +6,12 @@ import "./AboutMe.css";
 export default function AboutMe(props) {
   
   let fadeInScreenHandler = (screen) => {
-    if (screen.fadeInScreen !== props.id) return;
+    if (!props || screen.fadeInScreen !== props.id) return;
     Animations.animations.fadeInScreen(props.id);
   };
+  
   ScrollService.currentScreenFadeIn.subscribe(fadeInScreenHandler);
-
+  
   const SCREEN_CONSTSANTS = {
     description:
       "Computer Scientist. Passionate about staying up-to-date with the latest technologies and trends in computer science. ",

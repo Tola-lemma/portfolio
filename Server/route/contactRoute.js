@@ -1,27 +1,25 @@
 const router = require('express').Router();
 const nodemailer = require('nodemailer');
 
-
 router.post('/contact', (req,res) =>{
     let data = req.body;
-    if (data.name.length === 0 || data.email.length === 0 || data.message.length === 0) {
-        return res.json({msg: "please fill all the fields.."})
+    if (!data.name.trim() || !data.email.trim() || !data.message.trim()) {
+         return res.json({msg: "please fill all the fields.."})
     }
-
         let smtpTransporter = nodemailer.createTransport({
-            service: 'Gmail',
-            port:465,
+            service: 'gmail',
+            host:"smtp.gmail.com",
             auth:{
-                user: 'rwsoeriawinata@gmail.com',
-                pass: 'Wahoofamily2022@#'
+                user: process.env.EMAIL_ADDRESS,
+                pass: process.env.PASSWORD
             }
         })
         let mailOptions = {
             from:data.email,
-            to:'rwsoeriawinata@gmail.com',
+            to:process.env.EMAIL_ADDRESS,
             subject: `message from ${data.name}`,
             html:`
-                <h3>Informations<h3/>
+                <h3>Informations From Portifolio<h3/>
                 <ul>
                     <li>Name: ${data.name}</li>
                     <li>Email: ${data.email}</li>

@@ -9,13 +9,12 @@ const Resume = (props) => {
   const [carousalOffsetStyle, setCarousalOffsetStyle] = useState({})
 
   let fadeInScreenHandler = (screen) => {
-    if (screen.fadeInScreen !== props.id) return;
-
+    if (!props || screen.fadeInScreen !== props.id) return;
     Animations.animations.fadeInScreen(props.id);
   };
   
-    ScrollService.currentScreenFadeIn.subscribe(fadeInScreenHandler);
-
+  ScrollService.currentScreenFadeIn.subscribe(fadeInScreenHandler);
+  
     const ResumeHeading = (props) => {
       return (
         <div className="resume-heading">

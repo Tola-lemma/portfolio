@@ -1,0 +1,29 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "Backend for my portfolio",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server": "npm start server.js",
+    "portfolio": "cd../Client && npm start",
+    "dev": "concurrently \"node server\" \"npm run portfolio\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Tola-lemma/portfolio.git"
+  },
+  "author": "Tola Lemma",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Tola-lemma/portfolio/issues"
+  },
+  "homepage": "https://github.com/Tola-lemma/portfolio#readme",
+  "dependencies": {
+    "concurrently": "^7.6.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "nodemailer": "^6.9.1"
+  }
+}
