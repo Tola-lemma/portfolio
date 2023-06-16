@@ -9,6 +9,9 @@ export const Profile = () => {
         <div className="profile-details">
           <div className="colz">
             <div className="colz-icon">
+            <a href="https://github.com/Tola-lemma">
+              <i className="fa-brands fa-github"></i>
+            </a>
             <a href="https://m.facebook.com/m.tolalemma">
               <i className="fa-brands fa-facebook"></i>
             </a>
@@ -23,9 +26,6 @@ export const Profile = () => {
             </a>
             <a href="https://t.me/tolalemma">
               <i className="fa-brands fa-telegram"></i>
-            </a>
-            <a href="https://call.imo.im/1optimisticboy">
-              <i className="fa-brands fa-google-plus"></i>
             </a>
             </div>
           </div>
@@ -65,7 +65,7 @@ export const Profile = () => {
                 Hire Me
                 {' '}
               </button>
-              <a href="My_CV.pdf" download="Tola Lemma's resume.pdf">
+              <a href="Resume.pdf" download="Tola Lemma's resume.pdf">
                 <button className="btn highlighted-btn">
                   Get Resume
                 </button>
