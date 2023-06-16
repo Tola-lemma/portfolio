@@ -1,15 +1,15 @@
 # Personal Portfolio
 This repository contains my personal portfolio, showcasing my skills, projects, and experience. It serves as a comprehensive overview of my professional background and achievements.
 
-#Table of Contents
+# Table of Contents
 - Description
 - Technologies Used
 - Features
 
-#Description
+#  Description
 The personal portfolio is a web-based application designed to present my professional profile to potential employers, clients, or collaborators. It provides a visually appealing and user-friendly interface that highlights my skills, showcases my projects, and offers a means of contact.
 
-#Technologies Used
+# Technologies Used
 The portfolio is built using the following technologies:
 
 <b>`React:`</b> Used for creating the frontend UI components and managing the application's state.</br>

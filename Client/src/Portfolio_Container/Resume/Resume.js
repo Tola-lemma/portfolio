@@ -95,7 +95,7 @@ const Resume = (props) => {
           "Technologies Used:  Dart, Flutter.",
       },
       {
-        title: "Customer RElation Management for Minsitry of Eduaction",
+        title: "Customer Relation Management for Minsitry of Eduaction",
         duration: { fromDate: "2023", toDate: "present" },
         description:
           "Automating tasks that comes from customer.",
