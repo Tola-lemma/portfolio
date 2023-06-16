@@ -5,9 +5,7 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "server": "npm start server.js",
-    "portfolio": "cd ../Client && npm start",
-    "dev": "concurrently \"node server\" \"npm run portfolio\""
+    "server": "npm start server.js"
   },
   "repository": {
     "type": "git",
