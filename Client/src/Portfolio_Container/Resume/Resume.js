@@ -121,13 +121,13 @@ const Resume = (props) => {
         <div className="experience-container">
           <ResumeHeading
             heading={"No work experience "}
-            subHeading={"currently I have no work experience"}
+            subHeading={"currently I am Working at Awura Computing PLC"}
             fromDate={"..."}
             toDate={"..."}
           />
           <div className="experience-description">
             <span className="resume-description-text">
-              Currently working as ..........
+              Currently working as Frontend Software Developer at Awura Computing PLC.
             </span>
           </div>
           <div className="experience-description">
