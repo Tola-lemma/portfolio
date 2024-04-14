@@ -88,7 +88,7 @@ const Resume = (props) => {
       },
       {
         title: "Camera Recharge Mobile Card Application",
-        duration: { fromDate: "2022", toDate: "2023" },
+        duration: { fromDate: "December 2022", toDate: "January 2023" },
         description:
           "The Camera Recharge Mobile card is a mobile application built with Flutter that allows users to check their balance and recharge their mobile account using their smartphone camera and recognize text using recognition technology.",
         subHeading:
@@ -96,7 +96,7 @@ const Resume = (props) => {
       },
       {
         title: "Customer Relation Management for Minsitry of Eduaction",
-        duration: { fromDate: "2023", toDate: "present" },
+        duration: { fromDate: "Nov 2022", toDate: "Jun 2023" },
         description:
           "Automating tasks that comes from customer.",
         subHeading:
@@ -105,110 +105,145 @@ const Resume = (props) => {
     ];
   
   const resumeDetails = [
-      <div className="resume-screen-container" key="education">
+    <div className="resume-screen-container" key="education">
+      <ResumeHeading
+        heading={"Addis Ababa University, Ethiopia"}
+        subHeading={"Bachelor of Computer Science"}
+        fromDate={"2019"}
+        toDate={"2023"}
+      />
+    </div>,
+
+    /* WORK EXPERIENCE */
+    <div className="resume-screen-container" key="work-experience">
+      <div className="experience-container">
         <ResumeHeading
-          heading={"Addis Ababa University, Ethiopia"}
-          subHeading={"Bachelor of Computer Science"}
-          fromDate={"2019"}
-          toDate={"2023"}
+          heading={"Three month Experience In Front end Software Developer "}
+          subHeading={"Worked at Awura Computing PLC"}
+          fromDate={"August 2023"}
+          toDate={"November 2023"}
         />
-  
-        
-      </div>,
-  
-      /* WORK EXPERIENCE */
-      <div className="resume-screen-container" key="work-experience">
-        <div className="experience-container">
-          <ResumeHeading
-            heading={"No work experience "}
-            subHeading={"currently I am Working at Awura Computing PLC"}
-            fromDate={"..."}
-            toDate={"..."}
-          />
-          <div className="experience-description">
-            <span className="resume-description-text">
-              Currently working as Frontend Software Developer at Awura Computing PLC.
-            </span>
+        <div className="experience-description">
+          <span className="resume-description-text">
+            Worked as Frontend Software Developer at Awura Computing PLC.
+          </span>
+        </div>
+        <div className="experience-description">
+          <span className="resume-description-text">
+            - Developed{" "}
+            <a
+              href="https://owlevents.app"
+              target="_blank"
+              rel="noreferrer"
+              style={{ fontWeight: "bolder", textDecoration: "none" }}
+            >
+              owlevents.app
+            </a>
+          </span>
+          <br />
+          <span className="resume-description-text">- CRM for MoE {' '}
+          <a
+              href="https://moe-crm-4y3a.onrender.com/"
+              target="_blank"
+              rel="noreferrer"
+              style={{ fontWeight: "bolder", textDecoration: "none" }}
+            >
+               Minsitry of Eduaction CRM
+            </a>
+          </span>
+          <br />
+          <span className="resume-description-text">
+            - Social Media Clone {' '}
+            <a
+              href="https://tolasocial-com.onrender.com/"
+              target="_blank"
+              rel="noreferrer"
+              style={{ fontWeight: "bolder", textDecoration: "none" }}
+            >
+              tolasocial.com
+            </a>
+          </span>
+          <br />
+          <span className="resume-description-text">
+            - Camera Recharge and Text Recognition App
+          </span>
+          <br />
+        </div>
+      </div>
+    </div>,
+
+    /* PROGRAMMING SKILLS */
+    <div
+      className="resume-screen-container programming-skills-container"
+      key="programming-skills"
+    >
+      {programmingSkillsDetails.map((skill, index) => (
+        <div className="skill-parent" key={index}>
+          <div className="heading-bullet">
+            <i className="fa-sharp fa-solid fa-code"></i>{" "}
           </div>
-          <div className="experience-description">
-            <span className="resume-description-text">
-              - Developed .........
-            </span>
-            <br />
-            <span className="resume-description-text">
-              - API and real-time monitoring for .....
-            </span>
-            <br />
-            <span className="resume-description-text">
-              - tools to digitize ......
-            </span>
-            <br />
+          <span>{skill.skill}</span>
+          <div className="skill-percentage">
+            <div
+              style={{ width: skill.ratingPercentage + "%" }}
+              className="active-percentage-bar"
+            ></div>
           </div>
         </div>
-      </div>,
-  
-      /* PROGRAMMING SKILLS */
-      <div className="resume-screen-container programming-skills-container" key="programming-skills">
-        {programmingSkillsDetails.map((skill, index) => (
-          <div className="skill-parent" key={index}>
-            <div className="heading-bullet"><i className="fa-sharp fa-solid fa-code"></i> </div>
-            <span>{skill.skill}</span>
-            <div className="skill-percentage">
-              <div
-                style={{ width: skill.ratingPercentage + "%" }}
-                className="active-percentage-bar"
-              ></div>
-            </div>
-          </div>
-        ))}
-      </div>,
+      ))}
+    </div>,
 
-      /* Application SKILLS */
-      <div className="resume-screen-container application-skills-container" key="application-skills">
-        {applicationSkillsDetails.map((skill, index) => (
-          <div className="skill-parent" key={index}>
-            <div className="heading-bullet"><i className="fa-sharp fa-solid fa-desktop"></i> </div>
-            <span>{skill.skill}</span>
-            <div className="skill-percentage">
-              <div
-                style={{ width: skill.ratingPercentage + "%" }}
-                className="active-percentage-bar"
-              ></div>
-            </div>
+    /* Application SKILLS */
+    <div
+      className="resume-screen-container application-skills-container"
+      key="application-skills"
+    >
+      {applicationSkillsDetails.map((skill, index) => (
+        <div className="skill-parent" key={index}>
+          <div className="heading-bullet">
+            <i className="fa-sharp fa-solid fa-desktop"></i>{" "}
           </div>
-        ))}
-      </div>,
+          <span>{skill.skill}</span>
+          <div className="skill-percentage">
+            <div
+              style={{ width: skill.ratingPercentage + "%" }}
+              className="active-percentage-bar"
+            ></div>
+          </div>
+        </div>
+      ))}
+    </div>,
 
-      /* PROJECTS */
-      <div className="resume-screen-container" key="projects">
-        {projectsDetails.map((projectsDetails, index) => (
-          <ResumeHeading
-            key={index}
-            heading={projectsDetails.title}
-            subHeading={projectsDetails.subHeading}
-            description={projectsDetails.description}
-            fromDate={projectsDetails.duration.fromDate}
-            toDate={projectsDetails.duration.toDate}
-          />
-        ))}
-      </div>,
-  
-      /* Interests */
-      <div className="resume-screen-container" key="interests">
+    /* PROJECTS */
+    <div className="resume-screen-container" key="projects">
+      {projectsDetails.map((projectsDetails, index) => (
         <ResumeHeading
-          heading="Reading"
-          description="Like Holy Bible, technology related sites/books."
+          key={index}
+          heading={projectsDetails.title}
+          subHeading={projectsDetails.subHeading}
+          description={projectsDetails.description}
+          fromDate={projectsDetails.duration.fromDate}
+          toDate={projectsDetails.duration.toDate}
         />
-        <ResumeHeading
-          heading="Editing and Designing"
-          description="I like Editing with adobe premiere pro, youtube movie maker and Adobe illustrator for logo design and photo editing."
-        />
-        <ResumeHeading
-          heading="Helping people"
-          description="I'm highly interested in helping people who needs help"
-        />
-      </div>,
-    ];
+      ))}
+    </div>,
+
+    /* Interests */
+    <div className="resume-screen-container" key="interests">
+      <ResumeHeading
+        heading="Reading"
+        description="Like Holy Bible, technology related sites/books."
+      />
+      <ResumeHeading
+        heading="Editing and Designing"
+        description="I like Editing with adobe premiere pro, youtube movie maker and Adobe illustrator for logo design and photo editing."
+      />
+      <ResumeHeading
+        heading="Helping people"
+        description="I'm highly interested in helping people who needs help"
+      />
+    </div>,
+  ];
 
   const handleCarousal = (index) => {
       let offsetHeight = 360;
