@@ -47,6 +47,8 @@ export const Profile = () => {
                       2000,
                       "MERN Stack Developer 🌐  ",
                       2000,
+                      "PERN Stack Developer 🌐  ",
+                      2000,
                       "React Dev  ",
                       2000,
                     ]}
