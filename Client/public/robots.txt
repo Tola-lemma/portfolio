@@ -1,0 +1,7 @@
+# robots.txt for portfolio-tolalemma.onrender.com
+
+User-agent: *
+Disallow:
+
+# sitemap URL 
+Sitemap: https://portfolio-tolalemma.onrender.com/sitemap.xml
