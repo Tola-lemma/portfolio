@@ -35,7 +35,6 @@ export default function Contactme(props) {
     const handleMessage = (e) => {
         setMessage(e.target.value);
     };
-    console.log(name);
     const submitForm = async (e) =>{
         e.preventDefault();
         try {
@@ -45,12 +44,14 @@ export default function Contactme(props) {
                 message,
             };
             setBool(true)
+            if (name.length === 0 || email.length === 0 || message.length === 0) {
+                setBanner("All fields are required");
+                toast.error("All fields are required");
+                setBool (false);
+                return;
+            }
             const res = await axios.post('/contact', data)
-            if(name.length === 0 || email.length === 0 || message.length === 0){
-                setBanner(res.data.msg)
-                toast.error(res.data.msg)
-                setBool (false)
-            }else if(res.status === 200){
+             if(res.status === 200){
                 setBanner(res.data.msg)
                 toast.success(res.data.msg)
                 setBool (false);
@@ -60,9 +61,16 @@ export default function Contactme(props) {
                 setMessage("");
             }
         } catch (error) {
-            console.log(error)
-            
-        }
+    setBool(false);
+
+    if (error.response) {
+        toast.error(error.response.data?.msg || "Server error");
+    } else if (error.request) {
+        toast.error("No response from server");
+    } else {
+        toast.error(error.message);
+    }
+}
     };
 
     return (
