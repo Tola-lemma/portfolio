@@ -14,6 +14,7 @@ router.post('/contact', async (req, res) => {
       host: "smtp.gmail.com",
       port: 465,
       secure: true,
+      family: 4, //FORCE IPv4
       auth: {
         user: process.env.EMAIL_ADDRESS,
         pass: process.env.PASSWORD 
