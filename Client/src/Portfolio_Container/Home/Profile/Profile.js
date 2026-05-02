@@ -42,15 +42,23 @@ export const Profile = () => {
                   {' '}
                   <Typical 
                     loop={Infinity}
-                    steps={[
-                      "Full Stack Developer 💻  ",
+                  steps={[
+                      "System Security Engineer 🔐",
                       2000,
-                      "MERN Stack Developer 🌐  ",
+                      "Ethical Hacker 🛡️",
                       2000,
-                      "PERN Stack Developer 🌐  ",
+                      "Penetration Tester 🧪",
                       2000,
-                      "React Dev  ",
+                      "Bug Bounty Hunter 🐞",
                       2000,
+                      "Full Stack Developer 💻",
+                      2000,
+                      "MERN Stack Developer 🌐",
+                      2000,
+                      "PERN Stack Developer 🌐",
+                      2000,
+                      "React Developer ⚛️",
+                      2000
                     ]}
                   />
                 </h1>
