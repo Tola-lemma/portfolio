@@ -1,42 +1,79 @@
 const router = require('express').Router();
 const nodemailer = require('nodemailer');
 
-router.post('/contact', (req,res) =>{
-    let data = req.body;
-    if (!data.name.trim() || !data.email.trim() || !data.message.trim()) {
-         return res.json({msg: "please fill all the fields.."})
-    }
-        let smtpTransporter = nodemailer.createTransport({
-            service: 'gmail',
-            host:"smtp.gmail.com",
-            auth:{
-                user: process.env.EMAIL_ADDRESS,
-                pass: process.env.PASSWORD
-            }
-        })
-        let mailOptions = {
-            from:data.email,
-            to:process.env.EMAIL_ADDRESS,
-            subject: `message from ${data.name}`,
-            html:`
-                <h3>Informations From Portifolio<h3/>
-                <ul>
-                    <li>Name: ${data.name}</li>
-                    <li>Email: ${data.email}</li>
-                </ul>
-                <h3>Message<h3/>
-                <p>${data.message}<p/>
-            `
-        }
+router.post('/contact', async (req, res) => {
+  const { name, email, message } = req.body;
 
-        smtpTransporter.sendMail(mailOptions, (error)=>{
-            try {
-                if(error) return res.status(400).json({msg: 'Please fill all the fields..'})
-                res.status(200).json({msg: 'Thank you for contacting..'})
+  // Validation
+  if (!name?.trim() || !email?.trim() || !message?.trim()) {
+    return res.status(400).json({ msg: "Please fill all the fields." });
+  }
 
-            } catch (error) {
-                if(error) return res.status(500).json({msg: "There is server error"})
-            }
-        })
-})
-module.exports=router;
+  try {
+    const transporter = nodemailer.createTransport({
+      host: "smtp.gmail.com",
+      port: 587,
+      secure: false,
+      auth: {
+        user: process.env.EMAIL_ADDRESS,
+        pass: process.env.PASSWORD 
+      }
+    });
+
+    
+    const mailOptions = {
+      from: `"Portfolio Contact" <${process.env.EMAIL_ADDRESS}>`,
+      replyTo: email,
+      to: process.env.EMAIL_ADDRESS,
+      subject: `📩 New Message from ${name}`,
+      html: `
+        <div style="font-family: Arial, sans-serif; background: #f4f6f8; padding: 20px;">
+          <div style="max-width: 600px; margin: auto; background: #ffffff; border-radius: 10px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+            
+            <!-- Header -->
+            <div style="background: #4f46e5; color: #fff; padding: 20px; text-align: center;">
+              <h2 style="margin: 0;">📬 New Contact Message</h2>
+              <p style="margin: 5px 0 0;">From your portfolio website</p>
+            </div>
+
+            <!-- Body -->
+            <div style="padding: 20px;">
+              <h3 style="color: #333;">👤 Sender Info</h3>
+              <p><strong>Name:</strong> ${name}</p>
+              <p><strong>Email:</strong> ${email}</p>
+
+              <hr style="margin: 20px 0;" />
+
+              <h3 style="color: #333;">💬 Message</h3>
+              <p style="line-height: 1.6; color: #555;">
+                ${message}
+              </p>
+            </div>
+
+            <!-- Footer -->
+            <div style="background: #f1f1f1; padding: 15px; text-align: center; font-size: 12px; color: #777;">
+              <p>This message was sent from your portfolio contact form.</p>
+            </div>
+
+          </div>
+        </div>
+      `
+    };
+
+    // Send Email (await → no timeout issue)
+    await transporter.sendMail(mailOptions);
+
+    return res.status(200).json({
+      msg: "Message sent successfully!"
+    });
+
+  } catch (error) {
+    console.error("EMAIL ERROR:", error);
+
+    return res.status(500).json({
+      msg: "Failed to send message. Please try again later."
+    });
+  }
+});
+
+module.exports = router;
