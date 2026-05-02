@@ -72,7 +72,7 @@ router.post('/contact', async (req, res) => {
     console.error("EMAIL ERROR:", error);
 
     return res.status(500).json({
-      msg: "Failed to send message. Please try again later."
+      msg: "Failed to send message. Please try again later." + error
     });
   }
 });
