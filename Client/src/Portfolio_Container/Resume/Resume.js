@@ -118,19 +118,26 @@ const Resume = (props) => {
     <div className="resume-screen-container" key="work-experience">
       <div className="experience-container">
         <ResumeHeading
-          heading={"Three month Experience In Front end Software Developer "}
-          subHeading={"Worked at Awura Computing PLC"}
-          fromDate={"August 2023"}
-          toDate={"November 2023"}
-        />
+          heading={"Frontend Software Developer (3-Month Contract)"}
+          subHeading={"Awura Computing PLC"}
+          fromDate={"Aug 2023"}
+          toDate={"Nov 2023"}
+          />
+        <br/>
+         <ResumeHeading
+            heading={"IT System Security Engineer (2.5 Years Experience [CyberSecurity related])"}
+            subHeading={"Oromia Bank SC"}
+            fromDate={"October 2023"}
+            toDate={"Present"}
+        /><br/>
         <div className="experience-description">
           <span className="resume-description-text">
-            Worked as Frontend Software Developer at Awura Computing PLC.
+            Selected Projects so far
           </span>
         </div>
         <div className="experience-description">
           <span className="resume-description-text">
-            - Developed{" "}
+            - Event Organization website{" "}
             <a
               href="https://owlevents.app"
               target="_blank"
@@ -152,6 +159,17 @@ const Resume = (props) => {
             </a>
           </span>
           <br />
+          <span className="resume-description-text">- Employee Management System {' '}
+          <a
+              href="https://employee-management-system-ems-bwry.onrender.com/"
+              target="_blank"
+              rel="noreferrer"
+              style={{ fontWeight: "bolder", textDecoration: "none" }}
+            >
+               Employee Management System
+            </a>
+          </span>
+          <br />
           <span className="resume-description-text">
             - Social Media Clone {' '}
             <a
@@ -163,11 +181,27 @@ const Resume = (props) => {
               tolasocial.com
             </a>
           </span>
-          <br />
-          <span className="resume-description-text">
-            - Camera Recharge and Text Recognition App
+           <br />
+            <span className="resume-description-text">
+            - E-Commerce website{' '}
+            <a
+              href="https://gebeyamarketapp.onrender.com/"
+              target="_blank"
+              rel="noreferrer"
+              style={{ fontWeight: "bolder", textDecoration: "none" }}
+            >
+              [Gebeya-Market]
+            </a>
+            ⟺
+             <a
+              href="https://e-commerce-web-app-wik5.onrender.com/"
+              target="_blank"
+              rel="noreferrer"
+              style={{ fontWeight: "bolder", textDecoration: "none" }}
+            >
+              [Exclusive]
+            </a>
           </span>
-          <br />
         </div>
       </div>
     </div>,
